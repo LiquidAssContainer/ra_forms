@@ -15,7 +15,7 @@ export function loadLocalData() {
 export function sortRecordsByDate(data) {
   return data.sort((a, b) => {
     if (a.date < b.date) return 1;
-    if (a.date === b.date) return 0;
     if (a.date > b.date) return -1;
+    return 0;
   });
 }
