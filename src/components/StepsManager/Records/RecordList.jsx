@@ -1,3 +1,4 @@
+import { formatDateToDMY } from '../utils';
 import { Button } from './Button';
 
 export function RecordList({ children }) {
@@ -8,7 +9,7 @@ export function RecordList({ children }) {
 
     return (
       <div className="steps-manager_record">
-        <div className="record_date">{date}</div>
+        <div className="record_date">{formatDateToDMY(date)}</div>
         <div className="record_distance">{distance}</div>
         {/* <Button buttonType="edit" clickHandler={onRecordEdit} date={date} /> */}
         <Button buttonType="remove" clickHandler={onRecordRemove} date={date} />

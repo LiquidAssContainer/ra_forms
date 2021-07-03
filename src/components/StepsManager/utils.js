@@ -19,3 +19,8 @@ export function sortRecordsByDate(data) {
     return 0;
   });
 }
+
+export function formatDateToDMY(date) {
+  const [year, month, day] = date.split('-');
+  return `${day}.${month}.${year}`;
+}
